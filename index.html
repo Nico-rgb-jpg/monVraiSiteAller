@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zogo Obame Nicolas - CV</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-user"></i> ZOGO OBAME NICOLAS</h1>
+        <p>Développeur Web | Grenoble, Auvergne-Rhône-Alpes</p>
+        <nav>
+            <ul>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#experience">Expériences</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Présentation -->
+        <section id="about" class="presentation">
+            <div class="photo">
+                <img src="Album/62269f2a2d55fe0bd0c8e611a6b2974d.jpg" alt="Zogo Obame Nicolas">
+            </div>
+            <div class="infos">
+                <h2>À propos</h2>
+                <p>Étudiant passionné par le développement web et les nouvelles technologies. En formation pour devenir développeur fullstack avec une expérience pratique sur HTML, CSS, JavaScript et les plateformes cloud.</p>
+                <a href="#" class="btn-cv">Télécharger CV PDF</a>
+            </div>
+            <div class="contact">
+                <h3><i class="fas fa-envelope"></i> Contact</h3>
+                <p><i class="fas fa-phone"></i> 06 XX XX XX XX</p>
+                <p><i class="fas fa-envelope"></i> zogo@example.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Grenoble, Auvergne-Rhône-Alpes</p>
+            </div>
+        </section>
+
+        <!-- Compétences -->
+        <section id="skills" class="border-glow">
+    <h2><i class="fas fa-code"></i> Compétences</h2>
+            <div class="skills">
+                <div class="skill">
+                    <span>HTML/CSS</span>
+                    <div class="barre"><div class="progress" style="width: 90%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>JavaScript</span>
+                    <div class="barre"><div class="progress" style="width: 75%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Git/GitHub</span>
+                    <div class="barre"><div class="progress" style="width: 85%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Responsive Design</span>
+                    <div class="barre"><div class="progress" style="width: 80%"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expériences -->
+        <section id="experience" class="border-glow">
+    <h2><i class="fas fa-briefcase"></i> Expériences</h2>
+            <div class="exp">
+                <div class="exp-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="exp-info">
+                    <h3>Formation Développeur Web</h3>
+                    <span class="date">2025 - 2026</span>
+                </div>
+                <div class="exp-desc">
+                    <p>Formation intensive en développement web (HTML5, CSS3, JavaScript, React, Node.js).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projets -->
+        <section id="projects" class="border-glow">
+            <h2><i class="fas fa-project-diagram"></i> Projets</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Site Web Personnel</h3>
+                    <p>Création d'un portfolio personnel avec HTML, CSS et JavaScript.</p>
+                    <a href="#" class="btn-project">Voir le projet</a>
+                </div>
+                <div class="project-card">
+                    <h3>Application To-Do List</h3>
+                    <p>Application web pour gérer les tâches quotidiennes avec React.</p>
+                    <a href="#" class="btn-project">Voir le projet</a>
+                </div>
+                <div class="project-card">
+                    <h3>API REST</h3>
+                    <p>Développement d'une API RESTful avec Node.js et Express.</p>
+                    <a href="#" class="btn-project">Voir le projet</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="border-glow">
+            <h2><i class="fas fa-envelope"></i> Contactez-moi</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>&copy; 2026 Zogo Obame Nicolas. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for nav links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Merci pour votre message ! Je vous répondrai bientôt.');
+            this.reset();
+        });
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0s';
+                }
+            });
+        });
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
